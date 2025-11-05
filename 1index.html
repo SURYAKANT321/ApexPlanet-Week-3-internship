@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.Responsive Design Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+      gap: 20px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 20px;
+      flex: 1;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    /*Tablet View (≤ 768px)*/
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .box {
+        width: 90%;
+      }
+
+      header {
+        font-size: 22px;
+      }
+    }
+
+    /*Mobile View (≤ 480px)*/
+    @media (max-width: 480px) {
+      header {
+        font-size: 18px;
+        padding: 15px 0;
+      }
+
+      .box {
+        width: 100%;
+        padding: 15px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Responsive Design Using Media Queries</h1>
+  </header>
+
+  <div class="container">
+    <div class="box">
+      <h2>Box 1</h2>
+      <p>This is some example text inside box 1.</p>
+    </div>
+
+    <div class="box">
+      <h2>Box 2</h2>
+      <p>This is some example text inside box 2.</p>
+    </div>
+
+    <div class="box">
+      <h2>Box 3</h2>
+      <p>This is some example text inside box 3.</p>
+    </div>
+  </div>
+
+</body>
+</html>
